@@ -8,6 +8,8 @@ yum remove -y rh-nodejs8 rh-nodejs8-npm rh-nodejs8-nodejs-nodemon
 yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS
 ln -fs /opt/rh/rh-git29/root/usr/bin/git /usr/bin/git
 
+yum install -y java-1.8.0-openjdk-devel
+
 # Ensure git uses https instead of ssh for NPM install
 # See: https://github.com/npm/npm/issues/5257
 echo -e "Setting git config rules"
